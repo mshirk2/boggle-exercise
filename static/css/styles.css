@@ -2,23 +2,48 @@ body {
     background-image: linear-gradient( #051937, #004d7a, #008793, #00bf72, #a8eb12);
     text-align: center;
     min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 4.5rem;
+    padding: 30px;
+    letter-spacing: .3rem;
     color: white;
 }
 
 .board {
-    font-size: 3em;
+    font-size: 50px;
     margin: auto;
     background-color: gainsboro;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
+    table-layout: fixed;
+    border-spacing: 10px;
 }
 
 td {
-    background-color:#008793;
+    background-color:white;
+    color: #004d7a;
     text-align: center;
-    width: 40px;
-    height: 40px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
+    width: 65px;
+    margin: 5px;
+}
 
+input, button {
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #004d7a;
+    color: white;
 }

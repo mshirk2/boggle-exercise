@@ -21,12 +21,17 @@ def homepage():
     return render_template('index.html', board=board)
 
 
-@app.route('/submit')
-def check_guess():
+@app.route('/submit', methods=['POST'])
+def check_word():
     """Send guess to server, check if word is valid"""
 
-    window.preventDefault()
+    guess = request.form["guess"]
+    print(guess)
+    board = session['board']
+    status = boggle_game.check_valid_word(board, guess)
 
-    return redirect('/')
+    result = jsonify({'result': status})
+    print(result)
+    return result
 
 
