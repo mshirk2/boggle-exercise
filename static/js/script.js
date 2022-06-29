@@ -1,0 +1,5 @@
+class BoggleGame {
+    
+    constructor(board)
+
+}

@@ -12,22 +12,21 @@ boggle_game = Boggle()
 
 
 @app.route('/')
-def start_page():
-    """Shows start page with button to begin"""
-
-    return render_template('start.html')
-
-@app.route('/game')
-def game_page():
+def homepage():
     """Shows game board"""
 
-    return render_template('game.html')
+    board = boggle_game.make_board()
+    session['board'] = board
+
+    return render_template('index.html', board=board)
 
 
 @app.route('/submit')
-def submit_guess():
-    """Send guess to server, check if correct"""
+def check_guess():
+    """Send guess to server, check if word is valid"""
 
-    return redirect('/game')
+    window.preventDefault()
+
+    return redirect('/')
 
 

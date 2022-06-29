@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-
-    {% block content %}
     <h1>Boggle!</h1>
+    {% block content %}
+    
     {% endblock %}
 
-
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
     <script src="/static/js/script.js"></script>
 </body>
 </html>
