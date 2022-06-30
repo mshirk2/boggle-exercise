@@ -7,7 +7,6 @@ body {
 
 h1 {
     font-size: 4.5rem;
-    padding: 30px;
     letter-spacing: .3rem;
     color: white;
 }
@@ -17,7 +16,7 @@ h1 {
     margin: auto;
     background-color: gainsboro;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     table-layout: fixed;
     border-spacing: 10px;
 }

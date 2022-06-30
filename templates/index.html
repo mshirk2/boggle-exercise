@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOGGLE</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,15 +26,21 @@
 
 
         <br>
-        <form class = "guess-form" methods="POST">
-            <input type="text" name="guess" autofocus>
-                <button id="submit-guess">Enter</button>
+        <form class="guess-form" method="POST">
+            <input id="guess" autofocus>
+                <button>Enter</button>
         </form>
+
+        <ul class="words">
+        
+        </ul>
     </section>
 
 <script src="http://unpkg.com/jquery"></script>
 <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
-<script src="/static/js/script.js"></script>
-<script> let game = new BoggleGame("boggle", 60)</script>
+<script src="/static/script.js"></script>
+<script> 
+    let game = new BoggleGame("boggle"); 
+</script>
 </body>
 </html>
