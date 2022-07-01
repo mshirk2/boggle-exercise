@@ -27,20 +27,22 @@
 
         <br>
         <form class="guess-form" method="POST">
-            <input id="guess" autofocus>
+            <input name="guess" class="guess" autofocus>
                 <button>Enter</button>
         </form>
+        
+        <p class="msg">
+            <!-- Area to display status message, populated by app.js -->
+        </p>
 
         <ul class="words">
-        
+            <!-- Area to display found words, populated by app.js -->
         </ul>
     </section>
 
 <script src="http://unpkg.com/jquery"></script>
 <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
-<script src="/static/script.js"></script>
-<script> 
-    let game = new BoggleGame("boggle"); 
-</script>
+<script src="/static/app.js"></script>
+
 </body>
 </html>

@@ -25,12 +25,11 @@ def homepage():
 def check_word():
     """Send guess to server, check if word is valid"""
 
-    word = request.args.get("#guess")
-    print("@app.route guess = ", word)
+    word = request.args['word']
     board = session['board']
-    status = boggle_game.check_valid_word(board, word)
+    response = boggle_game.check_valid_word(board, word)
 
-    result = jsonify({'result': status})
+    result = jsonify({'result': response})
     print("@app.route result = ", result)
     return result
 
