@@ -12,6 +12,10 @@
     <h1>BOGGLE</h1>
 
     <section id="boggle">
+        <div class="above-board">
+            <p>Times Played: {{ numplays }}</p>
+            <p>High Score: {{ highscore }}</p>
+        </div>
         <table class="board">
             <tbody>
                 {% for row in board %}
@@ -31,13 +35,18 @@
                 <button>Enter</button>
         </form>
         
-        <p class="msg">
-            <!-- Area to display status message, populated by app.js -->
-        </p>
+        <div class="below-board">
+            <p class="timer-area">Time remaining = <span id="timer"></span></p>
+            <p class="score-area">Score: 0</p>
 
-        <ul class="words">
-            <!-- Area to display found words, populated by app.js -->
-        </ul>
+            <p class="message-area">
+                <!-- Area to display status message, populated by app.js -->
+            </p>
+
+            <ul class="words-area">
+                <!-- Area to display found words, populated by app.js -->
+            </ul>
+        </div>
     </section>
 
 <script src="http://unpkg.com/jquery"></script>
